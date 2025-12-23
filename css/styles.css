@@ -255,6 +255,7 @@ footer{
 	line-height: 1.6;
 	margin: 15px 0;
 	/*border: 1px dotted green;*/
+	/*white-space: pre-line;*/
 }
 .poem-mm {
 	font-family: "Noto Sans Myanmar", sans-serif;
@@ -263,6 +264,7 @@ footer{
 	line-height: 2;
 	margin: 35px 0;
 	/*border: 1px double blue;*/
+	/*white-space: pre-line;*/
 }
 .poem-en-preview{
 	width: 100%;
@@ -304,7 +306,7 @@ footer{
 	border-radius: 5px;
 }
 .poet-wrapper{
-	text-decoration: none;
+	/*text-decoration: underline;*/
 }
 .poet-wrapper:hover .poet {
 	color: #5c2e0d;
@@ -312,6 +314,7 @@ footer{
 }
 .poet-wrapper .poet{
 	color: #8b4513;
+	text-decoration: underline;
 }
 .note{
 	margin: 25px 0 0;
