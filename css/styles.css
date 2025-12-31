@@ -54,11 +54,14 @@ footer{
 	/*margin-top: 2px;*/
 	font-family: "Cormorant Garamond", serif;
 	font-size: 1.5rem;
-	/*color: var(--background-color);*/
+	color:var(--font-color);
 	/*background-color: var(--font-color);*/
 	font-weight: 600;
 	/*padding: 3px;*/
-	/*border: solid	red;*/
+	/*border: solid	red;*/	
+}
+.brand-name-wrapper{
+	text-decoration: none;
 }
 .logo-wrapper{
 	display: inline-block;
@@ -66,6 +69,7 @@ footer{
 	width: 200px;
 	/*border: solid red ;*/
 }
+
 #logo-img {
 	background: url('../images/ilovepoems.png') no-repeat;
 	width: 100%;
@@ -186,6 +190,7 @@ footer{
 	display:block;
 	position: relative;
 	width:100%;
+	max-width: 300px;
 	height: 350px;
 	border-radius: 10px;
 	overflow: hidden;
@@ -253,7 +258,7 @@ footer{
 	font-style: normal;
 	font-size: 1rem;
 	line-height: 1.6;
-	margin: 15px 0;
+	margin: 20px 0;
 	/*border: 1px dotted green;*/
 	/*white-space: pre-line;*/
 }
@@ -262,7 +267,7 @@ footer{
 	font-weight: 400;
 	font-size: .8rem;
 	line-height: 2;
-	margin: 35px 0;
+	margin: 50px 0;
 	/*border: 1px double blue;*/
 	/*white-space: pre-line;*/
 }
@@ -317,10 +322,19 @@ footer{
 	text-decoration: underline;
 }
 .note{
-	margin: 25px 0 0;
+	margin: 20px 0 0;
 	border-bottom: 5px solid #2f4f4f;
 	font-family: "Cormorant Garamond", serif;
+	padding-bottom: 10px;
 	/*border: 1px dashed black;*/
+}
+
+/*ajax-loader*/
+.text-center {
+  display: flex;
+  justify-content: center;   /* horizontal centering */
+  align-items: center;       /* vertical centering */
+  height: 100%;              /* or set a fixed height like 200px */
 }
 /**********END Translation***********/
 

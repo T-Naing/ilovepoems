@@ -21,4 +21,48 @@ document.addEventListener("DOMContentLoaded", function () {
       menuToggle.checked = false;
     }
   });
+
+  // Handle poem card clicks
+  document.querySelectorAll(".poem-card-wrapper").forEach(card => {
+    card.addEventListener("click", function (e) {
+      e.preventDefault();
+      const poemFile = this.dataset.poemFile;
+      if (poemFile) {
+        $dc.loadPoem(poemFile);
+      }
+    });
+  });
 });
+
+(function (global) {
+  var dc = {};
+
+  var theAwaitedHtml = "snippets/translation-the-awaited.html";
+
+  // Convenience function for inserting innerHTML for 'select'
+  var insertHtml = function (selector, html) {
+    var targetElem = document.querySelector(selector);
+    targetElem.innerHTML = html;
+  };
+
+  // Show loading icon inside element identified by 'selector'.
+  var showLoading = function (selector) {
+    var html = "<div class='text-center'>";
+    html += "<img src='images/ajax-loader.gif'></div>";
+    insertHtml(selector, html);
+  };
+
+  // Load poem dynamically
+  dc.loadPoem = function (poemHtmlPath) {
+    showLoading("#display-sec");
+    $ajaxUtils.sendGetRequest(
+      poemHtmlPath,
+      function (responseText) {
+        document.querySelector("#display-sec").innerHTML = responseText;
+      },
+      false
+    );
+  };
+
+  global.$dc = dc;
+})(window);
