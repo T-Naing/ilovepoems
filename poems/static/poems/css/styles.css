@@ -1,31 +1,41 @@
-:root{
-	--background-color: #FFFAF0;/*#FFFFF0;*/
+:root {
+	--background-color: #FFFAF0;
+	/*#FFFFF0;*/
 	--font-color: #333333;
 }
+
 *,
 *::before,
-*::after{
+*::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-html{
+
+html {
 	font-size: 20px;
 }
-body{
+
+body {
 	background-color: var(--background-color);
 	font-family: "Zain", sans-serif;
 	/*'Garamond', serif;*/
-	color:var(--font-color);
+	color: var(--font-color);
 	/*padding: 0 50px;*/
 }
+
+/* Lobotomized Owl 
+ * + * {
+  margin-top: 1rem;
+} */
 .header,
 main,
-footer{
+footer {
 	padding: 0 50px;
 }
+
 /********** NAVIGAGTION *************/
-.header{
+.header {
 	position: sticky;
 	top: 0;
 	/*padding: 15px 0;*/
@@ -33,7 +43,8 @@ footer{
 	z-index: 100;
 	/*border: solid blue	;*/
 }
-.nav-bar{
+
+.nav-bar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -44,26 +55,31 @@ footer{
 /********** BRAND *************/
 .brand {
 	display: flex;
-	flex-direction: column; 
-	text-align: left; /* Centers both elements */
+	flex-direction: column;
+	text-align: left;
+	/* Centers both elements */
 	/*border: solid green;*/
 	/*padding: 5px;*/
 }
-.brand-name{ /*I Love Poems*/
+
+.brand-name {
+	/*I Love Poems*/
 	display: inline;
 	/*margin-top: 2px;*/
 	font-family: "Cormorant Garamond", serif;
 	font-size: 1.5rem;
-	color:var(--font-color);
+	color: var(--font-color);
 	/*background-color: var(--font-color);*/
 	font-weight: 600;
 	/*padding: 3px;*/
-	/*border: solid	red;*/	
+	/*border: solid	red;*/
 }
-.brand-name-wrapper{
+
+.brand-name-wrapper {
 	text-decoration: none;
 }
-.logo-wrapper{
+
+.logo-wrapper {
 	display: inline-block;
 	height: 50px;
 	width: 200px;
@@ -74,21 +90,26 @@ footer{
 	background: url('../images/ilovepoems.png') no-repeat;
 	width: 100%;
 	height: 100%;
-	display: block;/*stretches to fill the parent container */
-	background-size: contain; /*maintain the aspect ratio and fill the container*/
+	display: block;
+	/*stretches to fill the parent container */
+	background-size: contain;
+	/*maintain the aspect ratio and fill the container*/
 	/*border: solid blueviolet;	*/
 }
+
 /********** END BRAND *************/
 
 .menu-toggle {
 	display: none;
 }
+
 /* Hamburger menu (hidden by default on desktop) */
 .hamburger {
 	display: none;
 	cursor: pointer;
 	padding: 10px;
 }
+
 .hamburger span {
 	display: block;
 	width: 25px;
@@ -97,7 +118,8 @@ footer{
 	margin: 5px 0;
 	transition: transform 0.3s ease, opacity 0.3s ease;
 }
-.nav-links{
+
+.nav-links {
 	list-style-type: none;
 	display: flex;
 	justify-content: space-evenly;
@@ -107,25 +129,30 @@ footer{
 	column-gap: 10px;
 	margin: 10px 0;
 }
-.nav-link{
+
+.nav-link {
 	display: inline-block;
 	padding: 10px;
 	text-decoration: none;
 	color: var(--font-color);
-/*	border: 1px solid red;*/
+	/*	border: 1px solid red;*/
 }
-.nav-link:active{
-	color: #000000;	
-	font-weight: 	bold;
+
+.nav-link:active {
+	color: #000000;
+	font-weight: bold;
 }
-.nav-link:hover{
+
+.nav-link:hover {
 	transform: scale(1.2);
 	color: red;
 	/*font-weight: 900;*/
 	text-decoration: underline;
-	transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Adds smooth effect */
+	transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+	/* Adds smooth effect */
 }
-#header-separator{
+
+#header-separator {
 	position: fixed;
 	/*top: 100px;*/
 	left: 0;
@@ -136,18 +163,20 @@ footer{
 	z-index: 99;
 	display: block;
 }
+
 /********** END NAVIGAGTION *************/
 
 /*********** MESSAGE SECTION ***********/
-#message-sec{
+#message-sec {
 	/*background-color: #F8F8FF;*/
 	background: url('../images/ChatGPT\ Image\ Nov\ 3\,\ 2025\,\ 10_59_45\ AM.png') no-repeat;
-	background-size: cover;	
-	padding:15px;
+	background-size: cover;
+	padding: 15px;
 	/*margin: 0 -50px;*/
 	/*border: solid red;*/
 }
-.message-mm{
+
+.message-mm {
 	max-width: 350px;
 	margin: 15px auto;
 	padding: 15px;
@@ -159,37 +188,40 @@ footer{
 	border: 1px solid #f5f5f5;
 	/*#8b4513;*/
 }
+
 /*********** END MESSAGE SECTION ***********/
 
 /*********** DISPLAY SECTION ***********/
-#display-sec{
+#display-sec {
 	/*text-align:center;*/
 	/*padding-top: 75px;*/
-	margin: 75px auto;	
+	margin: 75px auto;
 	/*border: 1px solid red;*/
 }
 
-#display-sec h2{
+#display-sec h2 {
 	/*border: 1px dotted green;*/
 	margin: 20px auto 20px;
 	font-size: 2.5rem;
-	text-align:center;
+	text-align: center;
 }
-.translation-tile{
+
+.translation-tile {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 50px;
 	/* max-width: 1200px; */
 	margin: 20px auto;
 	padding: 30px 0px 30px;
-/*	border: 1px solid red;*/
-} 
-.poem-card-wrapper{
+	/*	border: 1px solid red;*/
+}
+
+.poem-card-wrapper {
 	text-decoration: none;
 	color: var(--font-color);
-	display:block;
+	display: block;
 	position: relative;
-	width:100%;
+	width: 100%;
 	max-width: 300px;
 	margin: 0 auto;
 	height: 350px;
@@ -198,32 +230,39 @@ footer{
 	border: 1px solid #E6E2D6;
 	box-shadow: 0 4px 12px rgba(216, 212, 196, 0.6);
 }
-.poem-card-wrapper:hover{
+
+.poem-card-wrapper:hover {
 	box-shadow: 0 12px 24px rgba(216, 212, 196, 0.8);
 	border-color: #C8C4B4;
 	background-color: #FFFBEA;
 	transform: scale(1.03);
 	transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-/*transform: translateY(-0.2rem);*/
+	/*transform: translateY(-0.2rem);*/
 }
+
 .poem-card-wrapper:hover .read-more-label {
 	color: red;
 }
+
 .poem-card-wrapper .poem-title {
 	font-size: 1.5rem;
 }
+
 .poem-card-wrapper .poet {
 	font-size: 1.1rem;
 }
-.poem-card-wrapper .poem-en{
+
+.poem-card-wrapper .poem-en {
 	font-size: .9rem;
 	margin: 15px 0 0;
 }
-.poem-card-wrapper .poem-mm{
+
+.poem-card-wrapper .poem-mm {
 	font-size: .7rem;
 	margin: 0;
 }
-.poem-card{
+
+.poem-card {
 	/*overflow: hidden;*/
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -233,13 +272,23 @@ footer{
 	width: 100%;
 	height: 100%;
 }
-.poem-title{
+
+.poem-title_en {
 	font-family: "Cormorant Garamond", serif;
 	font-size: 2rem;
 	font-weight: 600;
 	text-transform: capitalize;
 }
-.poet{
+
+.poem-title_mm {
+	font-family: "Noto Sans Myanmar", sans-serif;
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	margin-top: 40px;
+}
+
+.poet {
 	font-family: "Cormorant Garamond", serif;
 	font-size: 1.2rem;
 	/*font-style: italic;*/
@@ -254,30 +303,35 @@ footer{
 	/*#444444;*/
 	/*border: 1px dashed red;*/
 }
+
 .poem-en {
 	font-family: "Cardo", serif;
 	/*font-weight: 500;*/
 	font-style: normal;
 	font-size: 1rem;
 	line-height: 1.6;
-	margin: 20px 0;
+	margin-top: 20px;
+	/* white-space: pre-wrap; */
 	/*border: 1px dotted green;*/
 	/*white-space: pre-line;*/
 }
+
 .poem-mm {
 	font-family: "Noto Sans Myanmar", sans-serif;
 	font-weight: 400;
 	font-size: .8rem;
 	line-height: 2;
-	margin: 50px 0;
+	margin-top: 10px;
 	/*border: 1px double blue;*/
 	/*white-space: pre-line;*/
 }
-.poem-en-preview{
+
+.poem-en-preview {
 	width: 100%;
 	height: 30%;
 	overflow: hidden;
 }
+
 /*.poem-mm-preview{
 }*/
 .fade-out-text {
@@ -288,22 +342,24 @@ footer{
 	-webkit-text-fill-color: transparent;
 	/*border: 1px solid red;*/
 }
-.read-more-label{
+
+.read-more-label {
 	position: absolute;
-	bottom:0;
-	left:0;
+	bottom: 0;
+	left: 0;
 	width: 100%;
-	background-color:  #F8F8FF;
+	background-color: #F8F8FF;
 	color: var(--font-color);
 	height: 13%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+
 /*********** END DISPLAY SECTION ***********/
 
 /**********Translation***********/
-.poem-translation{
+.poem-translation {
 	display: flex;
 	flex-direction: column;
 	background-color: #FFFFF0;
@@ -312,39 +368,87 @@ footer{
 	box-shadow: 0 4px 12px rgba(216, 212, 196, 0.6);
 	border-radius: 5px;
 }
-.poet-wrapper{
+
+.poems_list_items {
 	/*text-decoration: underline;*/
+	/* font-family: "Cormorant Garamond", serif; */
+	color: #8b4513;
+	line-height: 1.6;
 }
+
+.list {
+	margin-top: 20px;
+	padding-bottom: 25px;
+}
+
 .poet-wrapper:hover .poet {
 	color: #5c2e0d;
 	text-decoration: underline;
 }
-.poet-wrapper .poet{
+
+.poet-wrapper .poet {
 	color: #8b4513;
 	text-decoration: underline;
+	/* color: #6e3610; .poet*/
 }
-.note{
-	margin: 20px 0 0;
-	border-bottom: 5px solid #2f4f4f;
+
+.note {
+	margin: 50px 0 0;
+	/* border-bottom: 5px solid #2f4f4f; */
 	font-family: "Cormorant Garamond", serif;
-	padding-bottom: 10px;
+	/* padding-bottom: 25px; */
 	/*border: 1px dashed black;*/
 }
 
+.note .source {
+	color: var(--font-color);
+	text-decoration: underline;
+}
+
+.note .source:hover {
+	color: #ff7f50;
+	text-decoration: underline;
+}
+
+.bottom_bar {
+	/* margin: 20px 0 0; */
+	/* padding-bottom: 25px; */
+	/* border-bottom: 5px solid #2f4f4f; */
+	margin-top: 25px;
+	width: 100%;
+	height: 5px;
+	border: 0px;
+	background-color: #2f4f4f;
+}
+
+.about {
+	margin: 20px 0 0;
+	/* border-bottom: 5px solid #2f4f4f; */
+	font-family: "Cormorant Garamond", serif;
+	/* padding-bottom: 10px; */
+	/*border: 1px dashed black;*/
+}
+
+
 /*ajax-loader*/
 .text-center {
-  display: flex;
-  justify-content: center;   /* horizontal centering */
-  align-items: center;       /* vertical centering */
-  height: 100%;              /* or set a fixed height like 200px */
+	display: flex;
+	justify-content: center;
+	/* horizontal centering */
+	align-items: center;
+	/* vertical centering */
+	height: 100%;
+	/* or set a fixed height like 200px */
 }
+
 /**********END Translation***********/
 
-hr{
+hr {
 	width: 80%;
 	margin: 0px auto;
 }
-footer{
+
+footer {
 	height: 100px;
 	padding-top: 15px;
 	text-align: center;
@@ -352,70 +456,85 @@ footer{
 
 /*------------Media Queires-----------*/
 /*@media (max-width: 576px) {*/
-	@media (max-width: 768px) {
-		/* Show hamburger */
-		.hamburger {
-			display: block;
-			z-index: 101;
-		}
+@media (max-width: 768px) {
 
-		/* Hide nav links by default */
-		.nav-links-container {
-			position: fixed;
-			top: 0;
-			right: -100%;
-			width: 50%;
-			min-width: 150px;
-			height: 100vh;
-			background: var(--background-color);
-			transition: right 0.3s ease;
-			z-index: 100;
-			border: 1px solid #C8C4B4;
-		}
-
-		.nav-links {
-			flex-direction: column;
-			padding-top: 80px; /* Space for hamburger */  
-			row-gap: 0px;
-		}
-		.nav-links li {
-			width: 100%; /* Stretch each list item*/ 
-			border-bottom: 1px solid #ccc;
-		}
-		.nav-link {
-			display: block;          /*Ensures full width */
-			width: 100%;             /*Stretch to container */
-			text-align: center;  
-		}
-		.nav-links li:last-child{
-			border-bottom: none;	/* Optional: remove last border */
-		}
-
-		/* When checkbox is checked (menu open) */
-		.menu-toggle:checked ~ .nav-links-container {
-			right: 0;
-		}
-
-		/* Hamburger animation */
-		.menu-toggle:checked + .hamburger span:nth-child(1) {
-			transform: rotate(45deg) translate(5px, 5px);
-		}
-		.menu-toggle:checked + .hamburger span:nth-child(2) {
-			opacity: 0;
-		}
-		.menu-toggle:checked + .hamburger span:nth-child(3) {
-			transform: rotate(-45deg) translate(7px, -6px);
-		}
+	/* Show hamburger */
+	.hamburger {
+		display: block;
+		z-index: 101;
 	}
-	@media (max-width: 576px) {
-		.header,
-		main,
-		footer{
-			padding: 0 25px;
-		}
-		.poem-translation{
-			padding: 25px;
-		}
 
+	/* Hide nav links by default */
+	.nav-links-container {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 50%;
+		min-width: 150px;
+		height: 100vh;
+		background: var(--background-color);
+		transition: right 0.3s ease;
+		z-index: 100;
+		border: 1px solid #C8C4B4;
 	}
+
+	.nav-links {
+		flex-direction: column;
+		padding-top: 80px;
+		/* Space for hamburger */
+		row-gap: 0px;
+	}
+
+	.nav-links li {
+		width: 100%;
+		/* Stretch each list item*/
+		border-bottom: 1px solid #ccc;
+	}
+
+	.nav-link {
+		display: block;
+		/*Ensures full width */
+		width: 100%;
+		/*Stretch to container */
+		text-align: center;
+	}
+
+	.nav-links li:last-child {
+		border-bottom: none;
+		/* Optional: remove last border */
+	}
+
+	/* When checkbox is checked (menu open) */
+	.menu-toggle:checked~.nav-links-container {
+		right: 0;
+	}
+
+	/* Hamburger animation */
+	.menu-toggle:checked+.hamburger span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.menu-toggle:checked+.hamburger span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.menu-toggle:checked+.hamburger span:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -6px);
+	}
+}
+
+@media (max-width: 576px) {
+
+	.header,
+	main,
+	footer {
+		padding: 0 25px;
+	}
+
+	.poem-translation {
+		padding: 25px;
+	}
+
+}
+
 /*------------END Media Queires-----------*/

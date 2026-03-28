@@ -2,20 +2,25 @@
 {% block content %}
     <div class="poem-translation">
         <div class="poem">
-            {% if poem_list %}
-                <p class="poem-title_en">About Poet</p>
-                <p class="poem-en">{{ poet.about }}</p>
+            {% if all_poem_list %}
+                <p class="poem-title_en">Welcome to Burmese Translations Collection</p>
                 <ol class="list">
-                    {% for poem in poem_list %}
+                    {% for poem in all_poem_list %}
                         <li class="poems_list_items poet">
                             <span class="poet-wrapper">
                                 <a href="{% url 'poems:poem' poem.id %}" class="poet">{{ poem.title_en|striptags }}</a>
                             </span>
+                            <span class="poet-wrapper">
+                                By <a href="{% url 'poems:poet' poem.poet.id %}" class="poet">{{ poem.poet.name_en }}</a>
+                            </span>
                         </li>
                     {% endfor %}
                 </ol>
+            {% else %}
+                <p>No poems available.</p>
             {% endif %}
+            <hr class="bottom_bar">
+            {% comment %} <span class="bottom_bar"></span> {% endcomment %}
         </div>
-        <hr class="bottom_bar">
     </div>
 {% endblock content %}

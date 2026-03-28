@@ -2,14 +2,14 @@
 {% block content %}
     <div class="poem-translation">
         <div class="poem">
-            {% if poem_list %}
-                <p class="poem-title_en">About Poet</p>
-                <p class="poem-en">{{ poet.about }}</p>
+            {% if all_poet_list %}
+                <p class="poem-title_en">Welcome to Poet Collection</p>
+                {% comment %} <p class='poem-title'>{{ poet.name_en }}</p> {% endcomment %}
                 <ol class="list">
-                    {% for poem in poem_list %}
+                    {% for poet in all_poet_list %}
                         <li class="poems_list_items poet">
                             <span class="poet-wrapper">
-                                <a href="{% url 'poems:poem' poem.id %}" class="poet">{{ poem.title_en|striptags }}</a>
+                                <a href="{% url 'poems:poet' poet.id %}" class="poet">{{ poet.name_en }}</a>
                             </span>
                         </li>
                     {% endfor %}
@@ -17,5 +17,6 @@
             {% endif %}
         </div>
         <hr class="bottom_bar">
+        {% comment %} <span class='note'>{{ poet.About }}</span> {% endcomment %}
     </div>
-{% endblock content %}
+{% endblock %}

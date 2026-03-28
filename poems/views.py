@@ -23,11 +23,26 @@ def poem(request, poem_id):
 
 def poet(request, poet_id):
     poet = get_object_or_404(Poet, pk= poet_id)
-    poem_list = Poem.objects.filter(poet= poet_id)
+    poem_list = Poem.objects.filter(poet= poet_id).order_by("title_en")
 
     context = {
         "poet": poet,
         "poem_list": poem_list
     }
-
     return render(request, "poems/poet.html", context)
+
+def poems(request):
+    all_poem_list= Poem.objects.all().order_by("title_en","poet__name_en")
+
+    context = {
+        "all_poem_list": all_poem_list
+    }
+    return render(request, "poems/poems.html", context)
+
+def poets(request):
+    all_poet_list= Poet.objects.all().order_by("name_en")
+
+    context = {
+        "all_poet_list": all_poet_list
+    }
+    return render(request, "poems/poets.html", context)
