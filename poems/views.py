@@ -46,3 +46,7 @@ def poets(request):
         "all_poet_list": all_poet_list
     }
     return render(request, "poems/poets.html", context)
+
+def about(request):
+    
+    return render(request, "poems/about.html")

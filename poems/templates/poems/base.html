@@ -46,9 +46,9 @@
                         <li>
                             <a href="{% url 'poems:index' %}" class="nav-link">Home</a>
                         </li>
-                        <li>
+                        {% comment %} <li>
                             <a href="{% url 'poems:index' %}" class="nav-link">My Poems</a>
-                        </li>
+                        </li> {% endcomment %}
                         <li>
                             <a href="{% url 'poems:poems' %}" class="nav-link">Poems</a>
                         </li>
@@ -56,7 +56,7 @@
                             <a href="{% url 'poems:poets' %}" class="nav-link">Poets</a>
                         </li>
                         <li>
-                            <a href="{% url 'poems:index' %}" class="nav-link">About</a>
+                            <a href="{% url 'poems:about' %}" class="nav-link">About</a>
                         </li>
                     </ul>
                 </div>
@@ -68,15 +68,16 @@
                 <p class="poem-line-mm message-mm">ကဗျာများကို နှစ်သက်မိ၍ ဘာသာပြန်ရန် စမ်းသပ် အားထုတ်မိခြင်းသာ ဖြစ်သည်။</p>
             </section>
             <section id="display-sec">
-                {% block content %}{% endblock %}
+                {% block content %}
+                {% endblock content %}
             </section>
         </main>
         <hr>
         <footer>
-            <p>&copy; 2025 Thit T. Naing</p>
+            <p>&copy; ILOVEPOEMS</p>
         </footer>
     <!-- <script src="js/ajax-utils.js"></script>
-                                                        	<script src="js/script.js"></script> -->
+                                                                            	<script src="js/script.js"></script> -->
     <script src="{% static 'poems/js/ajax-utils.js' %}"></script>
     <script src="{% static 'poems/js/script.js' %}"></script>
 </body>

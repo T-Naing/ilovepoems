@@ -429,6 +429,27 @@ footer {
 	/*border: 1px dashed black;*/
 }
 
+.about_ilp {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.about_ilp~.poem-en,
+.about_ilp~.poem-mm {
+	text-align: justify;
+}
+
+.citation {
+	padding: 0 20px;
+	font-weight: bold;
+	font-style: italic;
+	/* text-align: justify; */
+}
+
+.poem-mm.citation {
+	margin-bottom: 15px;
+}
+
 
 /*ajax-loader*/
 .text-center {

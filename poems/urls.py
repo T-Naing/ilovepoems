@@ -8,6 +8,7 @@ urlpatterns = [
     path('poets/', views.poets, name='poets'),
     path('<int:poem_id>/', views.poem, name='poem'),
     path('poet/<int:poet_id>/', views.poet, name='poet'), 
+    path('about/', views.about, name='about'), 
      
 ]   
 
