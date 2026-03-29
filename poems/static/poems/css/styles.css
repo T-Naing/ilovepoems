@@ -378,7 +378,7 @@ footer {
 
 .list {
 	margin-top: 20px;
-	padding-bottom: 25px;
+	padding-bottom: 50px;
 }
 
 .poet-wrapper:hover .poet {
@@ -392,12 +392,39 @@ footer {
 	/* color: #6e3610; .poet*/
 }
 
+.trans-note {
+	margin: 10px 0 0;
+	font-family: Zain, sans-serif;
+	/* border: 1px dashed black; */
+	font-size: .75rem;
+	font-style: italic;
+	text-align: center;
+}
+
 .note {
 	margin: 50px 0 0;
 	/* border-bottom: 5px solid #2f4f4f; */
 	font-family: "Cormorant Garamond", serif;
 	/* padding-bottom: 25px; */
 	/*border: 1px dashed black;*/
+	word-wrap: break-word;
+	/* Allows long words/URLs to break */
+	overflow-wrap: break-word;
+	/* Modern equivalent */
+	white-space: normal;
+	font-style: italic;
+}
+
+.poem-en.poet_work {
+	font-size: 1.2rem;
+	/*font-style: italic;*/
+	font-weight: 600;
+	text-transform: capitalize;
+
+}
+
+.note.poet_about {
+	margin: 0;
 }
 
 .note .source {

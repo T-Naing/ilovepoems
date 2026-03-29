@@ -3,8 +3,9 @@
     <div class="poem-translation">
         <div class="poem">
             {% if poem_list %}
-                <p class="poem-title_en">About Poet</p>
+                <p class="poem-title_en">{{ poet.name_en }}</p>
                 <p class="poem-en">{{ poet.about }}</p>
+                <p class="poem-en poet_work">Poems by {{ poet.name_en }}</p>
                 <ol class="list">
                     {% for poem in poem_list %}
                         <li class="poems_list_items poet">
@@ -15,6 +16,13 @@
                     {% endfor %}
                 </ol>
             {% endif %}
+        </div>
+        <div class="note poet_about">
+            Source:
+            <a href="{{ poet.source }}"
+               class="source"
+               target="_blank"
+               rel="noopener noreferrer">{{ poet.source }}</a>
         </div>
         <hr class="bottom_bar">
     </div>

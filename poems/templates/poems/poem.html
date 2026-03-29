@@ -20,12 +20,15 @@
         </div>
         <div class="note">
             <p>{{ selected_poem.about }}</p>
-            <p>
-                <a href="{{ selected_poem.source }}"
-                   class="source"
-                   target="_blank"
-                   rel="noopener noreferrer">{{ selected_poem.source }}</a>
-            </p>
+            {% if selected_poem.source %}
+                <p>
+                    Source:
+                    <a href="{{ selected_poem.source }}"
+                       class="source"
+                       target="_blank"
+                       rel="noopener noreferrer">{{ selected_poem.source }}</a>
+                </p>
+            {% endif %}
         </div>
         <hr class="bottom_bar">
     </div>

@@ -5,6 +5,7 @@ class Poet(models.Model):
     name_en = models.CharField(max_length=100)
     name_mm = models.CharField(max_length=100)    # Myanmar name
     about = models.TextField(blank=True)          # About the poet
+    source = models.CharField(max_length=300, blank=True)
     
     def __str__(self):
         return self.name_en
@@ -15,11 +16,11 @@ class Poem(models.Model):
     poem_mm = models.TextField()                  # Myanmar poem content
     poem_en = models.TextField()                  # English poem content
     about = models.TextField(blank=True)          # About the poem
-    source = models.CharField(max_length=200, blank=True)
+    source = models.CharField(max_length=300, blank=True)
     featured = models.BooleanField(default=False)  # True/False column
     # FIXED: Changed from 'poets.Poet' to 'Poet'
     poet = models.ForeignKey('Poet', on_delete=models.CASCADE, related_name='poems')
     date_added = models.DateTimeField("date added")
     
     def __str__(self):
-        return self.title_en
+        return self.title_en + " By " + self.poet.name_en
