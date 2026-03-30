@@ -6,30 +6,35 @@
             <span class="poet">By</span>
             <a href="{% url 'poems:poet' selected_poem.poet.id %}"
                class="poet-wrapper">
-                <span class="poet">{{ selected_poem.poet.name_en }}</span>
-            </a>
-            <p class="poem-en">
-                <!-- {{ selected_poem.poem_en|linebreaks }} -->
-                {{ selected_poem.poem_en|linebreaksbr|safe }}
-            </p>
-            <p class="poem-title_mm">{{ selected_poem.title_mm }}</p>
-            <p class="poem-mm">
-                {{ selected_poem.poem_mm|linebreaksbr }}
-                <!-- {{selected_poem.poem_mm|linebreaks}}						 -->
-            </p>
-        </div>
-        <div class="note">
-            <p>{{ selected_poem.about }}</p>
-            {% if selected_poem.source %}
-                <p>
-                    Source:
-                    <a href="{{ selected_poem.source }}"
-                       class="source"
-                       target="_blank"
-                       rel="noopener noreferrer">{{ selected_poem.source }}</a>
+                <span class="poet">{{ selected_poem.poet.name_en }}</span><!--
+            --></a><!--
+            -->{% if selected_poem.poet.born_year and selected_poem.poet.dead_year %}
+                    <span class="poems_list_items poet">({{ selected_poem.poet.born_year }} - {{ selected_poem.poet.dead_year }})</span>
+                {% elif selected_poem.poet.born_year %}
+                    <span class="poems_list_items poet">(Born - {{ selected_poem.poet.born_year }})</span>
+                {% endif %}
+                <p class="poem-en">
+                    <!-- {{ selected_poem.poem_en|linebreaks }} -->
+                    {{ selected_poem.poem_en|linebreaksbr|safe }}
                 </p>
-            {% endif %}
+                <p class="poem-title_mm">{{ selected_poem.title_mm }}</p>
+                <p class="poem-mm">
+                    {{ selected_poem.poem_mm|linebreaksbr }}
+                    <!-- {{selected_poem.poem_mm|linebreaks}}						 -->
+                </p>
+            </div>
+            <div class="note">
+                <p>{{ selected_poem.about }}</p>
+                {% if selected_poem.source %}
+                    <p>
+                        Source:
+                        <a href="{{ selected_poem.source }}"
+                           class="source"
+                           target="_blank"
+                           rel="noopener noreferrer">{{ selected_poem.source }}</a>
+                    </p>
+                {% endif %}
+            </div>
+            <hr class="bottom_bar">
         </div>
-        <hr class="bottom_bar">
-    </div>
-{% endblock content %}
+    {% endblock content %}

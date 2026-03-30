@@ -304,6 +304,10 @@ footer {
 	/*border: 1px dashed red;*/
 }
 
+/* .poet::after {
+	display: none !important;
+} */
+
 .poem-en {
 	font-family: "Cardo", serif;
 	/*font-weight: 500;*/

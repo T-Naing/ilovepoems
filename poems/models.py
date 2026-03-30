@@ -6,6 +6,8 @@ class Poet(models.Model):
     name_mm = models.CharField(max_length=100)    # Myanmar name
     about = models.TextField(blank=True)          # About the poet
     source = models.CharField(max_length=300, blank=True)
+    born_year = models.PositiveSmallIntegerField("Year of birth", null=True, blank=False)
+    dead_year = models.PositiveSmallIntegerField("Year of death", null=True, blank=False)
     
     def __str__(self):
         return self.name_en
