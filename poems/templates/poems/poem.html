@@ -2,7 +2,7 @@
 {% block content %}
     <div class="poem-translation">
         <div class="poem">
-            <p class="poem-title_en">{{ selected_poem.title_en }}</p>
+                <p class="poem-title_en">{{ selected_poem.title_en }}</p>
             <span class="poet">By</span>
             <a href="{% url 'poems:poet' selected_poem.poet.id %}"
                class="poet-wrapper">
@@ -13,6 +13,21 @@
                 {% elif selected_poem.poet.born_year %}
                     <span class="poems_list_items poet">(Born - {{ selected_poem.poet.born_year }})</span>
                 {% endif %}
+
+                {% comment %} {{ line_count_en }} {% endcomment %}
+                {% if line_count_en > 50 %}
+                <p class="poem-title_mm">{{ selected_poem.title_mm }}</p>
+                <p class="poem-mm">
+                    {{ selected_poem.poem_mm|linebreaksbr }}
+                    <!-- {{selected_poem.poem_mm|linebreaks}}						 -->
+                </p>                
+                <p class="poem-en">
+                    <!-- {{ selected_poem.poem_en|linebreaks }} -->
+                    {{ selected_poem.poem_en|linebreaksbr|safe }}
+                </p> 
+
+                {% else %}
+                
                 <p class="poem-en">
                     <!-- {{ selected_poem.poem_en|linebreaks }} -->
                     {{ selected_poem.poem_en|linebreaksbr|safe }}
@@ -21,7 +36,9 @@
                 <p class="poem-mm">
                     {{ selected_poem.poem_mm|linebreaksbr }}
                     <!-- {{selected_poem.poem_mm|linebreaks}}						 -->
-                </p>
+                </p>             
+                {% endif %}
+
             </div>
             <div class="note">
                 <p>{{ selected_poem.about }}</p>

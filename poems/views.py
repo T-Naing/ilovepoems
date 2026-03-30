@@ -16,8 +16,12 @@ def index(request):
 
 def poem(request, poem_id):
     poem_obj = get_object_or_404(Poem, pk=poem_id)
-    context = {"selected_poem": poem_obj}
-
+    line_count_en = len(poem_obj.poem_en.split('\n'))
+    context = {
+        "selected_poem": poem_obj,
+        "line_count_en": line_count_en
+        }
+    
     # return HttpResponse(template.render(context, request))
     return render(request, "poems/poem.html", context)
 
@@ -33,7 +37,7 @@ def poet(request, poet_id):
 
 def poems(request):
     all_poem_list= Poem.objects.all().order_by("title_en","poet__name_en")
-
+    
     context = {
         "all_poem_list": all_poem_list
     }
