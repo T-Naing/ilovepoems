@@ -81,20 +81,22 @@ footer {
 
 .logo-wrapper {
 	display: inline-block;
-	height: 50px;
+	/* height: 50px;
+	width: 200px; */
+	height: 30px;
 	width: 200px;
-	/*border: solid red ;*/
+	/* border: solid red; */
 }
 
 #logo-img {
-	background: url('../images/ilovepoems.png') no-repeat;
+	background: url('../images/ilovepoems_icon.png') no-repeat;
 	width: 100%;
 	height: 100%;
 	display: block;
 	/*stretches to fill the parent container */
 	background-size: contain;
 	/*maintain the aspect ratio and fill the container*/
-	/*border: solid blueviolet;	*/
+	/* border: solid blueviolet; */
 }
 
 /********** END BRAND *************/
