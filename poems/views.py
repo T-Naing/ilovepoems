@@ -17,9 +17,13 @@ def index(request):
 def poem(request, poem_id):
     poem_obj = get_object_or_404(Poem, pk=poem_id)
     line_count_en = len(poem_obj.poem_en.split('\n'))
+
+    # poem_lines_en = poem_obj.poem_en.split('\n')
+
     context = {
         "selected_poem": poem_obj,
         "line_count_en": line_count_en
+        # "poem_lines_en": poem_lines_en
         }
     
     # return HttpResponse(template.render(context, request))

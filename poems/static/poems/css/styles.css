@@ -317,10 +317,16 @@ footer {
 	font-size: 1rem;
 	line-height: 1.6;
 	margin-top: 20px;
-	/* white-space: pre-wrap; */
 	/*border: 1px dotted green;*/
-	/*white-space: pre-line;*/
+	/* white-space: pre-wrap;
+	padding-left: 4ch;
+	text-indent: -4ch; */
 }
+
+/* This makes each line a block */
+/* .poem-en br {
+	display: none;
+} */
 
 .poem-mm {
 	font-family: "Noto Sans Myanmar", sans-serif;
