@@ -306,6 +306,15 @@ footer {
 	/*border: 1px dashed red;*/
 }
 
+.poet-mm {
+	font-family: "Noto Sans Myanmar", sans-serif;
+	font-size: 1rem;
+	/*font-style: italic;*/
+	font-weight: 500;
+	/* line-height: 2; */
+	color: #6e3610;
+}
+
 /* .poet::after {
 	display: none !important;
 } */
@@ -393,11 +402,13 @@ footer {
 	padding-bottom: 50px;
 }
 
+.poet-wrapper:hover .poet-mm,
 .poet-wrapper:hover .poet {
 	color: #5c2e0d;
 	text-decoration: underline;
 }
 
+.poet-wrapper .poet-mm,
 .poet-wrapper .poet {
 	color: #8b4513;
 	text-decoration: underline;

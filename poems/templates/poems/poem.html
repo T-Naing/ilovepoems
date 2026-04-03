@@ -23,6 +23,18 @@
                     {{ selected_poem.poem_en|linebreaksbr|safe }}
                 </p>
                 <p class="poem-title_mm">{{ selected_poem.title_mm }}</p>
+                <span class="poet-mm">—</span>
+                <a href="{% url 'poems:poet' selected_poem.poet.id %}"
+                class="poet-wrapper">
+                <span class="poet-mm">{{ selected_poem.poet.name_mm }}</span><!--
+            --></a><!--
+            
+            -->{% if selected_poem.poet.born_year and selected_poem.poet.dead_year %}
+                    <span class="poems_list_items poet">({{ selected_poem.poet.born_year }} - {{ selected_poem.poet.dead_year }})</span>
+                {% elif selected_poem.poet.born_year %}
+                    <span class="poems_list_items poet">(Born - {{ selected_poem.poet.born_year }})</span>
+                {% endif %}
+
                 <p class="poem-mm">
                     {{ selected_poem.poem_mm|linebreaksbr }}
                 </p>             
