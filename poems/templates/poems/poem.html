@@ -41,14 +41,15 @@
 
             </div>
             <div class="note">
-                <p>{{ selected_poem.about }}</p>
+                <p>{{ selected_poem.about |linebreaksbr }}</p>
                 {% if selected_poem.source %}
                     <p>
                         Source:
                         <a href="{{ selected_poem.source }}"
                            class="source"
                            target="_blank"
-                           rel="noopener noreferrer">{{ selected_poem.source }}</a>
+                           rel="noopener noreferrer">
+                           {{ selected_poem.source|linebreaksbr }}</a>
                     </p>
                 {% endif %}
             </div>
