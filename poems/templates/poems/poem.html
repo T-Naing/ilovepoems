@@ -18,10 +18,13 @@
 
                 {% comment %} {{ line_count_en }} {% endcomment %}
                              
-                <p class="poem-en">
-                    <!-- {{ selected_poem.poem_en|linebreaks }} -->
-                    {{ selected_poem.poem_en|linebreaksbr|safe }}
-                </p>
+                {% comment %} <p class="poem-en"> {% endcomment %}
+                    {% comment %} {{ selected_poem.poem_en|linebreaksbr|safe }} {% endcomment %}
+                    {% comment %} {{ selected_poem.poem_en|linebreaksbr }} {% endcomment %}
+                {% comment %} </p> {% endcomment %}
+                <div class="poem-en">
+                    {{ selected_poem.poem_en|linebreaks }}
+                </div>
                 <p class="poem-title_mm">{{ selected_poem.title_mm }}</p>
                 <span class="poet-mm">—</span>
                 <a href="{% url 'poems:poet' selected_poem.poet.id %}"
@@ -35,13 +38,13 @@
                     <span class="poems_list_items poet">(Born - {{ selected_poem.poet.born_year }})</span>
                 {% endif %}
 
-                <p class="poem-mm">
-                    {{ selected_poem.poem_mm|linebreaksbr }}
-                </p>             
+                <div class="poem-mm">
+                    {{ selected_poem.poem_mm|linebreaks }}
+                </div>             
 
             </div>
             <div class="note">
-                <p>{{ selected_poem.about |linebreaksbr }}</p>
+                <div>{{ selected_poem.about |linebreaks }}</div>
                 {% if selected_poem.source %}
                     <p>
                         Source:

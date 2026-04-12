@@ -8,8 +8,12 @@ from django.shortcuts import get_object_or_404
 
 def index(request):
     featured_poems = Poem.objects.filter(featured=True).select_related('poet')
+    recent_poems = Poem.objects.filter(featured=False).order_by('-date_added')[:3]
     
-    context = {"featured_poems": featured_poems}
+    context = {
+        "featured_poems": featured_poems,
+        "recent_poems": recent_poems
+        }
 
     # return HttpResponse(template.render(context, request))
     return render(request, "poems/index.html", context)

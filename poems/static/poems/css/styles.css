@@ -324,27 +324,44 @@ footer {
 	/*font-weight: 500;*/
 	font-style: normal;
 	font-size: 1rem;
-	line-height: 1.6;
+	/* line-height: 1.6; */
 	margin-top: 20px;
 	/*border: 1px dotted green;*/
 	/* white-space: pre-wrap;
 	padding-left: 4ch;
 	text-indent: -4ch; */
-}
+	/* white-space: pre-wrap; */
 
-/* This makes each line a block */
-/* .poem-en br {
-	display: none;
-} */
+}
 
 .poem-mm {
 	font-family: "Noto Sans Myanmar", sans-serif;
 	font-weight: 400;
 	font-size: .8rem;
-	line-height: 2;
+	/* line-height: 2; */
 	margin-top: 10px;
 	/*border: 1px double blue;*/
 	/*white-space: pre-line;*/
+	/* white-space: pre-wrap; */
+
+}
+
+.poem-en p,
+.poem-mm p {
+	/* text-indent: 2em; */
+
+	/* stanza spacing */
+	margin-bottom: .8rem;
+	white-space: normal;
+	/* border: 1px dotted green; */
+}
+
+.poem-en p {
+	line-height: 1.6;
+}
+
+.poem-mm p {
+	line-height: 2;
 }
 
 .poem-en-preview {
@@ -425,7 +442,7 @@ footer {
 }
 
 .note {
-	margin: 50px 0 0;
+	margin: 40px 0 0;
 	/* border-bottom: 5px solid #2f4f4f; */
 	font-family: "Cormorant Garamond", serif;
 	/* padding-bottom: 25px; */
@@ -436,6 +453,11 @@ footer {
 	/* Modern equivalent */
 	white-space: normal;
 	font-style: italic;
+}
+
+.note p {
+	margin-bottom: .3rem;
+
 }
 
 .poem-en.poet_work {

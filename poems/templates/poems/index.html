@@ -8,8 +8,7 @@
                 <a href="{% url 'poems:poem' poem.id %}"
                    class="poem-card-wrapper"
                    role="button"
-                   tabindex="0"
-                   data-poem-file="snippets/translation-the-awaited.html">
+                   tabindex="0">
                     <div class='poem-card'>
                         <p class='poem-title_en'>{{ poem.title_en }}</p>
                         <span class="poet">By</span>
@@ -21,5 +20,28 @@
                 </a>
             {% endfor %}
         {% endif %}
+        
     </div>
+
+    <h2>Recently added:</h2>
+    <hr>
+    <div class="translation-tile">
+        {% if recent_poems %}
+            {% for poem in recent_poems %}
+                <a href="{% url 'poems:poem' poem.id %}"
+                   class="poem-card-wrapper"
+                   role="button"
+                   tabindex="0">
+                    <div class='poem-card'>
+                        <p class='poem-title_en'>{{ poem.title_en }}</p>
+                        <span class="poet">By</span>
+                        <span class="poet">{{ poem.poet.name_en }}</span>
+                        <p class="poem-en poem-en-preview fade-out-text">{{ poem.poem_en|linebreaksbr }}</p>
+                        <p class="poem-mm poem-mm-preview fade-out-text">{{ poem.poem_mm|linebreaksbr }}</p>
+                    </div>
+                    <span class="read-more-label">Read More..</span>
+                </a>
+            {% endfor %}
+        {% endif %}
+            </div>
 {% endblock content %}
